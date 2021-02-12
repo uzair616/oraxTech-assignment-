@@ -5,9 +5,6 @@
       <h5 class="card-title">Comments</h5>
         <% @post.comments.each do |comment| %>
             <p class="card-text text-left">
-              <% if comment.user %>
-              [ by <i class="fa fa-user"></i> <%= comment.user.name  %> ]
-              <% end %>
               <%= comment.response %> <small>( Created  <%= time_ago_in_words(comment.created_at)  %> ago , Updated <%= time_ago_in_words(comment.updated_at)  %>   ago)</small></p>
             <hr>
         <% end %>
