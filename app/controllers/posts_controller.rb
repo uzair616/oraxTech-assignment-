@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
- skip_before_action :require_user , only: [:new,:create,:update]
+ skip_before_action :require_user , except: [:new,:create,:update]
  before_action :set_post,only: [:edit,:update,:destroy,:show]
 
    def index
